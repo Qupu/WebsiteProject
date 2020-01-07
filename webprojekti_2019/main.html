@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/navigation.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <meta charset="UTF-8">
+    <title>Etusivu</title>
+
+    <style>
+        p { color: #ffffff;}
+        body { background-color: #000000; }
+    </style>
+</head>
+<body>
+
+<h1 class="header">Webtekniikat ja digitaalinen media</h1>
+<nav>
+    <ul class="navigation">
+        <li><a class="active" href="main.html">Etusivu</a></li>
+        <li><a href="karttasivu.html">Kartta</a></li>
+        <li><a href="silma.html">Silmä</a></li>
+    </ul>
+</nav>
+<br><br>
+
+<p id="ip">Ip osoitteesi: </p>
+<p id="city">Kaupunki: </p>
+<p id="region">Maakunta: </p>
+
+<script>
+    var request = new XMLHttpRequest();
+
+    request.open('GET', 'https://api.ipdata.co/?api-key=cefda996579485aec81f32dd3cf5742e30bb3d5560fef3a7fcf5365d');
+
+    request.setRequestHeader('Accept', 'application/json');
+
+    request.onreadystatechange = function () {
+        if (this.readyState === 4) {
+            console.log(this.responseText);
+            const data = JSON.parse(request.responseText);
+            console.log(data.ip);
+            document.getElementById("ip").innerHTML += data.ip;
+            document.getElementById("city").innerHTML += data.city;
+            document.getElementById("region").innerHTML += data.region;
+            if (data.threat.is_proxy == false) {
+                console.log('ei proxya');
+            } else if (data.threat.is_proxy == false) {
+                console.log('proxy käytössä');
+            }
+        }
+    };
+
+    request.send();
+</script>
+<script>
+    var info={
+        timeOpened:new Date(),
+    };
+    console.log(info);
+</script>
+
+</body>
+</html>

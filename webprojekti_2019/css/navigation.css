@@ -1,0 +1,43 @@
+nav ul {
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+    margin: 6px;
+}
+
+nav a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    background-color: rgba(56, 62, 70, 0.88);
+    color: #ffffff;
+}
+
+nav a:hover {
+    background-color: #888888;
+}
+nav .active {
+    background-color: #000000;
+}
+
+nav a:active {
+    color: #ffffff;
+}
+a .active {
+    color: #ffffff;
+}
+
+.navigation {
+    padding: 20px;
+    margin: 6px;
+    color: #ffffff;
+    font-size: 120%;
+    text-align: center;
+    width: 100%;
+}

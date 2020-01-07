@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/navigation.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+    <style>
+        .map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+    <title>OpenLayers example</title>
+</head>
+
+
+
+<body style="color: white;background-color: black">
+
+<h1 class="header">Webtekniikat ja digitaalinen media</h1>
+<nav>
+    <ul class="navigation">
+        <li><a href="main.html">Etusivu</a></li>
+        <li><a class="active" href="karttasivu.html">Kartta</a></li>
+        <li><a href="silma.html">Silmä</a></li>
+    </ul>
+</nav>
+<br><br>
+
+<a href="salattu/kuvat.html" style="color: white">linkki</a>
+
+<div style="width: 100%; font-size: large;">
+    <p>CLICK ANYTHING TO KNOW THE TRUTH!</p>
+</div>
+
+<div id="map" class="map"></div>
+
+<script src="js/kartta.js"></script>
+
+<div style="width: 49%;height: 300px;float: left">
+    <br><br>
+    <button onclick="getLocation()">Your distance from the truth</button>
+    <p id="demo"></p>
+    <script src="js/currlocation.js"></script>
+</div>
+
+<div style="width: 49%;height: 300px;float: left;">
+    <p> Latitude: <input type="number" name="numero1" id="num1" step="0.0000000001"> </p>
+    <p> Longitude: <input type="number" name="numero2" id="num2" step="0.0000000001"></p>
+    <button onclick="distance()">Distance to the truth</button>
+    <script src="js/inputlocation.js"></script>
+</div>
+
+<div id="popup" class="ol-popup">
+    <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+    <div id="popup-content"></div>
+</div>
+<script src="js/popup.js"></script>
+
+</body>
+</html>
+
+

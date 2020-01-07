@@ -1,0 +1,58 @@
+.move-area{/*normally use body*/
+
+      width: 90vw;
+      height: 90vh;
+ /*    padding: 10% 45%; */
+
+}
+.container {
+    width: 100%;
+
+}
+
+
+.eye {
+ /*   position: absolute;
+    display: block;
+    /*border-radius: 50%;*/
+ /*   height: 30px;
+    width: 30px;
+    top:118px;
+    left:550px;
+    background-color: rgba(201, 76, 76, 0.0);
+    */
+    position: relative;
+    display: block;
+    /*border-radius: 50%;*/
+       height: 30px;
+       width: 30px;
+       top:118px;
+       left:215px;
+       background-color: rgba(201, 76, 76, 0.0);
+         float:right;
+
+
+       }
+
+       .image{
+
+             position:relative;
+           display: block;
+           margin-left:200px;
+           width: 50%;
+
+
+
+
+
+   }
+   .eye:after { /*pupil*/
+    position: absolute;
+    bottom: 17px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    content: " ";
+}
